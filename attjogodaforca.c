@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 	char palavra[3][10]={"PIZZA","CORVO","ESPANTALHO"},letra,secreta[3][10];
-	int tam,a,b,c,linha,chances,acertos,op;
+	int tam,a,linha,chances,acertos,op;
 	bool acerto;
 
 //Tamanho da palavra
@@ -72,8 +72,6 @@ int main(){
  	chances = 20;
 	acertos = 0;
 	a = 0;
-	b = 0;
-	c = 0;
 	tam = 0;
 	acerto = false;
 		
@@ -85,23 +83,23 @@ int main(){
 		switch(op){
 			case 1:
 				linha=0;
-				tamanho(linha,a);
-				secreto(linha,a);
-				jogo(linha,a);
+				tamanho(a,linha);
+				secreto(a,linha);
+				jogo(a,linha);
 				final();
 				break;
 			case 2:
 				linha=1;
-				tamanho(linha,b);
-				secreto(linha,b);
-				jogo(linha,b);
+				tamanho(a,linha);
+				secreto(a,linha);
+				jogo(a,linha);
 				final();
 				break;	
 			case 3:
 				linha=2;
-				tamanho(linha,c);
-				secreto(linha,c);
-				jogo(linha,c);
+				tamanho(a,linha);
+				secreto(a,linha);
+				jogo(a,linha);
 				final();
 				break;
 		}
